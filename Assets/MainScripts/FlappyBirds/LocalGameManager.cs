@@ -1,15 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms.Impl;
+
 using Zenject;
 
 public class LocalGameManager : MonoBehaviour
-{
+{   
     private int score = 0;
     [SerializeField] UnityEvent OnDie;
     [SerializeField] TextMeshProUGUI Text;
@@ -30,9 +27,11 @@ public class LocalGameManager : MonoBehaviour
     }
 
     public void ReloadGame()
-    {
+    {SetNewScores();
         MiniGameController.instance.ReloadGame();
+        
     }
+
 
     public void PlayMore()
     {
@@ -44,7 +43,10 @@ public class LocalGameManager : MonoBehaviour
     {
         scores.AddScores(score);
     }
-
+    public void DisableAll()
+    {
+        MiniGameController.instance.gameObject.SetActive(false);
+    }
     public void AddScore()
     {
         score++;
