@@ -13,7 +13,12 @@ public class MiniGameController: MonoBehaviour
     private void Awake()
     {
         instance = this;
+    }
+    private void OnEnable()
+    {
+       
         currentMiniGame = container.InstantiatePrefab(MiniGame, transform.position, transform.rotation, null);
+    
     }
     public void ReloadGame()
     {

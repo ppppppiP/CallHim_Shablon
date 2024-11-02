@@ -1,7 +1,19 @@
-﻿public class Scores
+﻿using TMPro;
+using UnityEngine;
+
+public class Scores : MonoBehaviour
 {
     private int Score;
+    public TextMeshProUGUI text;
 
+    private void Awake()
+    {
+        text.text = Score.ToString();
+    }
     public int GetScores() => Score;
-    public int AddScores(int a) => Score += a;
+    public void AddScores(int a) { 
+        
+        Score += a;
+        text.text = Score.ToString();
+    }
 }
