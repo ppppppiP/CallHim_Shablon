@@ -1,0 +1,601 @@
+fileFormatVersion: 2
+guid: 646cc51ba9fe6f841bcb67b18993d05f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 4, z: 5, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cringe game_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 44
+        width: 171
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10fbfd9b4847a8d4193d8dddde454f32
+      internalID: 754578937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cringe game_1
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 74
+        width: 30
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4923516f080e94c9dae4dbe1aa496a
+      internalID: -1335797490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cringe game_2
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 305
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9626ab995c464ee45999ff86c2f02218
+      internalID: 204934957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cringe game_3
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 314
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe09dee8b2de22345944728558a2bda0
+      internalID: 410145884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cringe game_4
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 296
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd28372b5f5aa8439865dc22488ad41
+      internalID: -569629062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cringe game_5
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 296
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f8599b18487c5e46b3f70784d3545f5
+      internalID: 1499358266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cringe game_6
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 296
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56298fe80b4f56c4ca26182398f4f37a
+      internalID: -882275276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cringe game_7
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 227
+        width: 48
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 260e7e453ba1d2746ba5cfa9ca33b405
+      internalID: 1948899467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cringe game_8
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 248
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81c344017f893944b0b37a63289abe5
+      internalID: 1369783844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cringe game_9
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 248
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f4b52592f036c418975e04560c6d6d
+      internalID: 1090806842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cringe game_10
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 248
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33038a99f52f99c4ebd1eed3ece2df8b
+      internalID: 532975056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cringe game_11
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 185
+        width: 108
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e215af0b72a27d47821c1a3560308bc
+      internalID: -1153583587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cringe game_12
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 200
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e29770b655cd666459dd8cd074c7ef26
+      internalID: 1559109325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cringe game_13
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 200
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25ef58073e47b2418c6d196834cb0bc
+      internalID: 1890466947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cringe game_14
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 200
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb3bfd5db9909a40b1913cece7228ae
+      internalID: 1572728345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cringe game_15
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 152
+        width: 72
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96817350f9704cc458cf5837d06e2adf
+      internalID: -309248234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cringe game_16
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 152
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cfdd57297c140e44a7704afa0ef96d6
+      internalID: -1417889104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cringe game_17
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 152
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5283afc626ae8f84698ea9b144fdcd41
+      internalID: -1864522311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cringe game_18
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 152
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a197bbdb2d6bff9488ae286f02089f65
+      internalID: -1728073912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -271.5, y: 153.5}
+      - {x: -278.5, y: 147.5}
+      - {x: -278.5, y: -149.5}
+      - {x: -272.5, y: -156.5}
+      - {x: -110.5, y: -156.5}
+      - {x: -103.5, y: -150.5}
+      - {x: -103.5, y: 146.5}
+      - {x: -109.5, y: 153.5}
+    - - {x: -59.5, y: 159.5}
+      - {x: -59.5, y: -126.5}
+      - {x: -25.5, y: -126.5}
+      - {x: -25.5, y: 159.5}
+    - - {x: -8.5, y: 18.5}
+      - {x: -8.5, y: -22.5}
+      - {x: 6.5, y: -48.5}
+      - {x: 96.5, y: -48.5}
+      - {x: 103.5, y: -13.5}
+      - {x: 103.5, y: 18.5}
+    - - {x: 114.5, y: 144.5}
+      - {x: 114.5, y: 95.5}
+      - {x: 163.5, y: 95.5}
+      - {x: 163.5, y: 144.5}
+    - - {x: 165.5, y: 144.5}
+      - {x: 165.5, y: 95.5}
+      - {x: 214.5, y: 95.5}
+      - {x: 214.5, y: 144.5}
+    - - {x: 216.5, y: 144.5}
+      - {x: 216.5, y: -48.5}
+      - {x: 265.5, y: -48.5}
+      - {x: 265.5, y: 144.5}
+    - - {x: -3.5, y: 81.5}
+      - {x: -8.5, y: 68.5}
+      - {x: -8.5, y: 38.5}
+      - {x: 6.5, y: 26.5}
+      - {x: 35.5, y: 26.5}
+      - {x: 43.5, y: 30.5}
+      - {x: 43.5, y: 64.5}
+      - {x: 40.5, y: 78.5}
+      - {x: 36.5, y: 81.5}
+    - - {x: -10.5, y: 144.5}
+      - {x: -11.5, y: 140.5}
+      - {x: -11.5, y: 108.5}
+      - {x: -10.5, y: 108.5}
+      - {x: -4.5, y: 104.5}
+      - {x: 12.5, y: 104.5}
+      - {x: 13.5, y: 106.5}
+      - {x: 13.5, y: 140.5}
+      - {x: 6.5, y: 144.5}
+    - - {x: 29.5, y: 132.5}
+      - {x: 27.5, y: 130.5}
+      - {x: 27.5, y: 115.5}
+      - {x: 29.5, y: 113.5}
+      - {x: 38.5, y: 113.5}
+      - {x: 40.5, y: 115.5}
+      - {x: 40.5, y: 130.5}
+      - {x: 38.5, y: 132.5}
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Cringe game_0: 754578937
+      Cringe game_1: -1335797490
+      Cringe game_10: 532975056
+      Cringe game_11: -1153583587
+      Cringe game_12: 1559109325
+      Cringe game_13: 1890466947
+      Cringe game_14: 1572728345
+      Cringe game_15: -309248234
+      Cringe game_16: -1417889104
+      Cringe game_17: -1864522311
+      Cringe game_18: -1728073912
+      Cringe game_2: 204934957
+      Cringe game_3: 410145884
+      Cringe game_4: -569629062
+      Cringe game_5: 1499358266
+      Cringe game_6: -882275276
+      Cringe game_7: 1948899467
+      Cringe game_8: 1369783844
+      Cringe game_9: 1090806842
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
