@@ -5,6 +5,7 @@ public class Pipe : MonoBehaviour
 {
     public float speed = 2f;
     [Inject] LocalGameManager _gameManager;
+  
     void Update()
     {
         transform.position += Vector3.left * speed * Time.deltaTime;
@@ -20,6 +21,7 @@ public class Pipe : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             _gameManager.AddScore();
+            
         }
     }
 }

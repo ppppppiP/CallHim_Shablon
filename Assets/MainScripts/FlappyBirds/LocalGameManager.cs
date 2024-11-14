@@ -12,6 +12,7 @@ public class LocalGameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI Text;
     [Inject] Scores scores;
 
+
     private void OnEnable()
     {
         score =  PlayerPrefs.GetInt("scores");
