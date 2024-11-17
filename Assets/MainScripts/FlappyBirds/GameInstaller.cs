@@ -9,6 +9,8 @@ public class GameInstaller: MonoInstaller
        
         Container.Bind<Scores>().FromInstance(scores);
         Container.Bind<Reward>().FromInstance(RewardCanvas);
+        Container.Bind<VideoManager>().FromNew();
     }
 
 }
+

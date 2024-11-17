@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+
 namespace YG
 {
     [System.Serializable]
@@ -11,24 +13,22 @@ namespace YG
         public bool promptDone;
 
         // Тестовые сохранения для демо сцены
-        // Можно удалить этот код, но тогда удалите и демо (папка Example)
-        public int money = 1;                       // Можно задать полям значения по умолчанию
+        public int money = 1;
         public string newPlayerName = "Hello!";
         public bool[] openLevels = new bool[3];
 
         // Ваши сохранения
-
-        // ...
+        public Dictionary<string, bool> videoStates = new Dictionary<string, bool>();
 
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
 
-
-        // Вы можете выполнить какие то действия при загрузке сохранений
+        // Инициализация полей
         public SavesYG()
         {
-            // Допустим, задать значения по умолчанию для отдельных элементов массива
-
+            // Пример инициализации по умолчанию
             openLevels[1] = true;
+            videoStates = new Dictionary<string, bool>();
         }
     }
+
 }
