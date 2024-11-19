@@ -1,32 +1,8 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
 using Zenject;
 using TMPro;
 using UnityEngine.Events;
 using YG;
-
-public class VideoManager
-{
-    private Dictionary<string, bool> videoStates = new Dictionary<string, bool>();
-
-    public void SaveVideoState(string videoId, bool isSold)
-    {
-        YandexGame.savesData.videoStates[videoId] = isSold;
-        YandexGame.SaveProgress();
-    }
-
-    public bool LoadVideoState(string videoId)
-    {
-        return YandexGame.savesData.videoStates.ContainsKey(videoId) && YandexGame.savesData.videoStates[videoId];
-    }
-
-    public void InitializeVideoState(LoadVideoButtonClick videoButton, string videoId)
-    {
-        bool isSold = LoadVideoState(videoId);
-        videoButton.isSold = isSold;
-        videoButton.UpdateLockState();
-    }
-}
 
 public class LoadVideoButtonClick : MonoBehaviour
 {
@@ -70,12 +46,13 @@ public class LoadVideoButtonClick : MonoBehaviour
 
     public void UpdateLockState()
     {
+        isSold = true;
         Lock.SetActive(!isSold);
     }
 
     public void OpenVideo()
     {
-        if (_scores.GetScores() >= Price)
+        if (_scores.GetScores() >= Price || isSold == true)
         {
             _scores.AddScores(-Price);
             Video.SetActive(true);
@@ -89,6 +66,8 @@ public class LoadVideoButtonClick : MonoBehaviour
         else
         {
             _rew.gameObject.SetActive(true);
+            _rew.SetCurrentVideoId(gameObject.name, this); // Передаем идентификатор видео в Reward
+         
         }
     }
 }
