@@ -3,6 +3,7 @@ using Zenject;
 using TMPro;
 using UnityEngine.Events;
 using YG;
+using Cysharp.Threading.Tasks.Triggers;
 
 public class LoadVideoButtonClick : MonoBehaviour
 {
@@ -27,13 +28,6 @@ public class LoadVideoButtonClick : MonoBehaviour
         YandexGame.GetDataEvent -= GetLoad;
     }
 
-    private void Start()
-    {
-        if (YandexGame.SDKEnabled == true)
-        {
-            GetLoad();
-        }
-    }
 
     public void GetLoad()
     {
@@ -42,6 +36,7 @@ public class LoadVideoButtonClick : MonoBehaviour
             text.text = YandexGame.savesData.money.ToString();
         }
         manager.InitializeVideoState(this, gameObject.name);
+  
     }
 
     public void UpdateLockState()
@@ -50,11 +45,24 @@ public class LoadVideoButtonClick : MonoBehaviour
         Lock.SetActive(!isSold);
     }
 
+    private void Start()
+    {
+        if (YandexGame.SDKEnabled)
+        {
+            GetLoad();
+        }
+
+        // Передаем общее количество видео в VideoManager (можно установить вручную или подсчитать в сцене).
+        manager.InitializeVideoManager(FindObjectsOfType<LoadVideoButtonClick>().Length);
+    }
+
     public void OpenVideo()
     {
-        if (_scores.GetScores() >= Price || isSold == true)
+        if (_scores.GetScores() >= Price || isSold)
         {
-            _scores.AddScores(-Price);
+            if(!isSold)
+                _scores.AddScores(-Price);
+
             Video.SetActive(true);
             isSold = true;
             Lock.SetActive(false);
@@ -67,7 +75,6 @@ public class LoadVideoButtonClick : MonoBehaviour
         {
             _rew.gameObject.SetActive(true);
             _rew.SetCurrentVideoId(gameObject.name, this); // Передаем идентификатор видео в Reward
-         
         }
     }
 }
