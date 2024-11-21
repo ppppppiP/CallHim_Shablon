@@ -29,7 +29,8 @@ public class PlayerController : MonoBehaviour
     {
         instance = this;
         controller = GetComponent<CharacterController>();
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         currentSpeed = speed;
     }
 
@@ -46,13 +47,12 @@ public class PlayerController : MonoBehaviour
                 horizontal = Input.GetAxis("Horizontal");
                 vertical = Input.GetAxis("Vertical");
             }
-            //else
-            //{
-            //    horizontal = joyStick.GetHorizontalValue();
-            //    vertical = joyStick.GetVerticalValue();
-            //}
-            //horizontal = joyStick.GetHorizontalValue();
-            //vertical = joyStick.GetVerticalValue();
+            else
+            {
+                horizontal = joyStick.GetHorizontalValue();
+                vertical = joyStick.GetVerticalValue();
+            }
+            
 
             Vector3 move = (transform.forward * vertical + transform.right * horizontal) * currentSpeed;
 

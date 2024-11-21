@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using YG;
 
 public class TouchController : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class TouchController : MonoBehaviour
     
     void Update()
     {
+        if(YandexGame.EnvironmentData.isMobile)
         _CameraLook.LockAxis = _FixedTouchField.TouchDist;
     }
 }

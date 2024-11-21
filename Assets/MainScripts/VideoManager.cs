@@ -74,15 +74,16 @@ public class VideoManager : MonoBehaviour
                 return YandexGame.savesData.VideoBool[i];
             }
         }
-        return false; // Если видео не найдено, возвращаем значение по умолчанию
+
+        return false; // Если идентификатор не найден, возвращаем "не продано"
     }
 
 
     public void InitializeVideoState(LoadVideoButtonClick videoButton, string videoId)
     {
-        bool isSold = LoadVideoState(videoId);
-        videoButton.isSold = isSold;
-        videoButton.UpdateLockState();
+        bool isSold = LoadVideoState(videoId); // Проверяем сохранённое состояние
+        videoButton.isSold = isSold;          // Применяем его к кнопке
+        //videoButton.UpdateLockState();        // Обновляем визуальное состояние
     }
 
     private void UpdateOpenedVideosCount()

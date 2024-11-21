@@ -10,7 +10,7 @@ public class LoadVideoButtonClick : MonoBehaviour
     [SerializeField] int Price;
     [SerializeField] GameObject Video;
     [SerializeField] GameObject Lock;
-    [SerializeField] TextMeshProUGUI text;
+    [SerializeField] TMP_Text text;
     public UnityEvent OnPlay;
     public bool isSold;
 
@@ -21,6 +21,7 @@ public class LoadVideoButtonClick : MonoBehaviour
     private void OnEnable()
     {
         YandexGame.GetDataEvent += GetLoad;
+        text.text = Price.ToString();
     }
 
     private void OnDisable()
@@ -31,15 +32,16 @@ public class LoadVideoButtonClick : MonoBehaviour
 
     public void GetLoad()
     {
- 
+        // Загружаем состояние видео из VideoManager
         manager.InitializeVideoState(this, gameObject.name);
-  
+
+        // Обновляем состояние замка только если видео действительно куплено
+        Lock.SetActive(!isSold);
     }
 
-    public void UpdateLockState()
+    private void Update()
     {
-        isSold = true;
-        Lock.SetActive(!isSold);
+        GetLoad();
     }
 
     private void Start()
@@ -67,6 +69,8 @@ public class LoadVideoButtonClick : MonoBehaviour
             manager.SaveVideoState(gameObject.name, isSold);
             YandexGame.savesData.money = _scores.GetScores();
             YandexGame.SaveProgress();
+
+            GetLoad();
         }
         else
         {

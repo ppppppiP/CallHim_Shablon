@@ -32,7 +32,7 @@ public class Reward : MonoBehaviour
         if (id == 0 && !string.IsNullOrEmpty(currentVideoId))
         {
             VideoManager.Instance.SaveVideoState(currentVideoId, true);
-            l.UpdateLockState();
+          //  l.UpdateLockState();
         }
         EOnShowAdd?.Invoke();
     }
