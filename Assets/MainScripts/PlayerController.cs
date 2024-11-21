@@ -46,13 +46,13 @@ public class PlayerController : MonoBehaviour
                 horizontal = Input.GetAxis("Horizontal");
                 vertical = Input.GetAxis("Vertical");
             }
-            else
-            {
-                horizontal = joyStick.GetHorizontalValue();
-                vertical = joyStick.GetVerticalValue();
-            }
-            horizontal = joyStick.GetHorizontalValue();
-            vertical = joyStick.GetVerticalValue();
+            //else
+            //{
+            //    horizontal = joyStick.GetHorizontalValue();
+            //    vertical = joyStick.GetVerticalValue();
+            //}
+            //horizontal = joyStick.GetHorizontalValue();
+            //vertical = joyStick.GetVerticalValue();
 
             Vector3 move = (transform.forward * vertical + transform.right * horizontal) * currentSpeed;
 
