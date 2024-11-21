@@ -31,10 +31,7 @@ public class LoadVideoButtonClick : MonoBehaviour
 
     public void GetLoad()
     {
-        if (text != null)
-        {
-            text.text = YandexGame.savesData.money.ToString();
-        }
+ 
         manager.InitializeVideoState(this, gameObject.name);
   
     }

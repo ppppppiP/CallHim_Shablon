@@ -19,15 +19,17 @@ namespace YG
         public float sensitivity = 100f;
         // Ваши сохранения
         public Dictionary<string, bool> videoStates = new Dictionary<string, bool>();
-
+        public string[] VideoName = new string[20];
+        public bool[] VideoBool = new bool[20];
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
 
         // Инициализация полей
         public SavesYG()
         {
-            // Пример инициализации по умолчанию
-            openLevels[1] = true;
-            videoStates = new Dictionary<string, bool>();
+    
+                VideoName = new string[20];
+                VideoBool = new bool[20];
+
         }
     }
 

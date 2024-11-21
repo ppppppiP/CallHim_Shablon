@@ -1,5 +1,5 @@
 {
-    "idSave": 371,
+    "idSave": 31,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -10,5 +10,49 @@
         true,
         false
     ],
-    "sensitivity": 123.90818786621094
+    "sensitivity": 345.3407897949219,
+    "VideoName": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "VideoBool": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+    ]
 }

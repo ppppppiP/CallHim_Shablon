@@ -1,7 +1,7 @@
-﻿using System.Linq;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using YG;
+using System.Linq;
 
 public class VideoManager : MonoBehaviour
 {
@@ -28,34 +28,55 @@ public class VideoManager : MonoBehaviour
         Total.text = TotalVideos.ToString();
      
     }
- 
+
     public void InitializeVideoManager(int totalVideos)
     {
         TotalVideos = totalVideos;
- 
+
+        // Обновляем количество открытых видео
+        UpdateOpenedVideosCount();
+
         Total.text = TotalVideos.ToString();
     }
 
     public void SaveVideoState(string videoId, bool isSold)
     {
-        if (YandexGame.savesData.videoStates.ContainsKey(videoId))
+        for (int i = 0; i < YandexGame.savesData.VideoName.Length; i++)
         {
-            YandexGame.savesData.videoStates[videoId] = isSold;
+            if (YandexGame.savesData.VideoName[i] == videoId)
+            {
+                // Если видео найдено, обновляем состояние
+                YandexGame.savesData.VideoBool[i] = isSold;
+                UpdateOpenedVideosCount();
+                YandexGame.SaveProgress();
+                return;
+            }
+            else if (string.IsNullOrEmpty(YandexGame.savesData.VideoName[i]))
+            {
+                // Если найден первый пустой слот, добавляем новое видео
+                YandexGame.savesData.VideoName[i] = videoId;
+                YandexGame.savesData.VideoBool[i] = isSold;
+                UpdateOpenedVideosCount();
+                YandexGame.SaveProgress();
+                return;
+            }
         }
-        else
-        {
-            YandexGame.savesData.videoStates.Add(videoId, isSold);
-        }
-        UpdateOpenedVideosCount();
-        YandexGame.SaveProgress();
-       
-       
+
+        Debug.LogWarning("Нет места для сохранения нового видео!");
     }
 
     public bool LoadVideoState(string videoId)
     {
-        return YandexGame.savesData.videoStates.ContainsKey(videoId) && YandexGame.savesData.videoStates[videoId];
+        for (int i = 0; i < YandexGame.savesData.VideoName.Length; i++)
+        {
+            if (YandexGame.savesData.VideoName[i] == videoId)
+            {
+                return YandexGame.savesData.VideoBool[i];
+            }
+        }
+        return false; // Если видео не найдено, возвращаем значение по умолчанию
     }
+
 
     public void InitializeVideoState(LoadVideoButtonClick videoButton, string videoId)
     {
@@ -66,7 +87,16 @@ public class VideoManager : MonoBehaviour
 
     private void UpdateOpenedVideosCount()
     {
-        OpenedVideos++;
+        OpenedVideos = 0;
+
+        for (int i = 0; i < YandexGame.savesData.VideoBool.Length; i++)
+        {
+            if (YandexGame.savesData.VideoBool[i])
+            {
+                OpenedVideos++;
+            }
+        }
+
         Opened.text = OpenedVideos.ToString();
     }
 }
