@@ -120,6 +120,7 @@ namespace YG
             YandexGame.OpenVideoEvent -= Stop;
             YandexGame.CloseVideoEvent -= Play;
             onPause -= Pause;
+
         }
 
         private void Stop() => Pause(true);
@@ -221,6 +222,10 @@ namespace YG
             else customEvents.CloseAd.Invoke();
 
             isPause = pause;
+           
         }
     }
 }
+
+
+

@@ -50,7 +50,7 @@ public class LocalGameManager : MonoBehaviour
     }
     public void AddScore()
     {
-        score++;
+        scores.AddScores(1);
         Text.text = score.ToString();
         Debug.Log("Score: " + score);
     }

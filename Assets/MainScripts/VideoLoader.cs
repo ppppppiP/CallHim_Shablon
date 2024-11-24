@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.Video;
-using static UnityEngine.GraphicsBuffer;
+
 
 public class VideoLoader : MonoBehaviour
 {
-    [HideInInspector] public string videoFileName; // Имя файла
-    public int selectedFileIndex; // Индекс выбранного файла
+    [HideInInspector] public string videoFileName;
+    public int selectedFileIndex;
     private VideoPlayer player;
+
+
 
     private void OnEnable()
     {
@@ -14,9 +16,29 @@ public class VideoLoader : MonoBehaviour
 
         if (player)
         {
+            if (LoadingObject.instance.gameObject != null)
+            {
+                LoadingObject.instance.gameObject.SetActive(true);
+            }
+
             string videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, videoFileName);
             player.url = videoPath;
-            player.Play();
+
+            player.prepareCompleted += OnVideoPrepared;
+
+            player.Prepare();
         }
+    }
+
+    private void OnVideoPrepared(VideoPlayer vp)
+    {
+        if (LoadingObject.instance.gameObject != null)
+        {
+            LoadingObject.instance.gameObject.SetActive(false);
+        }
+
+        vp.Play();
+
+        player.prepareCompleted -= OnVideoPrepared;
     }
 }

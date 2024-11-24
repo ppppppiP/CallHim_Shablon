@@ -16,7 +16,12 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 3da89146ec6b1c54cb34a7e88e62cbe1
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: d62ecf2b611069349a6de7686a2fd260
+    m_Address: Assets/MainScenes/ScholaGovna.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 346a92835aa27d04d85bd534aedb9957, type: 2}
   m_SchemaSet:

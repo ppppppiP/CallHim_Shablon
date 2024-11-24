@@ -45,7 +45,6 @@ public class CameraLook : MonoBehaviour
             LockAxis = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
         }
 
-        // Применение сглаживания
         currentLookAxis = Vector2.Lerp(currentLookAxis, LockAxis, Smoothing);
 
         XMove = currentLookAxis.x * Sensitivity * Time.deltaTime;

@@ -1,5 +1,6 @@
 ﻿using TMPro;
 using UnityEngine;
+using YG;
 
 public class Scores : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Scores : MonoBehaviour
 
     private void Awake()
     {
+        Score = YandexGame.savesData.money;
         text.text = Score.ToString();
     }
     public int GetScores() => Score;
@@ -15,5 +17,7 @@ public class Scores : MonoBehaviour
         
         Score += a;
         text.text = Score.ToString();
+        YandexGame.savesData.money = Score;
+        YandexGame.SaveProgress();
     }
 }

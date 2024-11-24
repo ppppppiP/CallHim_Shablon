@@ -29,8 +29,11 @@ public class PlayerController : MonoBehaviour
     {
         instance = this;
         controller = GetComponent<CharacterController>();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        if (YandexGame.EnvironmentData.isDesktop)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
         currentSpeed = speed;
     }
 

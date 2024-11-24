@@ -105,6 +105,7 @@ namespace YG
         {
             secondsPanelObject.SetActive(false);
             onHideTimer?.Invoke();
+           
             objSecCounter = 0;
             StartCoroutine(CheckTimerAd());
         }
