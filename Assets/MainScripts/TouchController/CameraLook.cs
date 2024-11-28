@@ -45,7 +45,7 @@ public class CameraLook : MonoBehaviour
             LockAxis = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
         }
 
-        currentLookAxis = Vector2.Lerp(currentLookAxis, LockAxis, Smoothing);
+        currentLookAxis = Vector2.Lerp(currentLookAxis, LockAxis, Smoothing * Time.deltaTime);
 
         XMove = currentLookAxis.x * Sensitivity * Time.deltaTime;
         YMove = currentLookAxis.y * Sensitivity * Time.deltaTime;

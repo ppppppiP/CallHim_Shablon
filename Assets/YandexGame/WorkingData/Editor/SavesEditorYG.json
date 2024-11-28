@@ -1,5 +1,5 @@
 {
-  "idSave": 298,
+  "idSave": 374,
   "isFirstSession": false,
   "language": "ru",
   "promptDone": false,
@@ -10,7 +10,7 @@
     false,
     false
   ],
-  "sensitivity": 288.678925,
+  "sensitivity": 128.84201,
   "videoStates": {},
   "VideoName": [
     "Video16",
@@ -26,8 +26,8 @@
     "Video10",
     "Video6",
     "Video14",
-    "",
-    "",
+    "Video8",
+    "Video13",
     "",
     "",
     "",
@@ -48,8 +48,8 @@
     true,
     true,
     true,
-    false,
-    false,
+    true,
+    true,
     false,
     false,
     false,

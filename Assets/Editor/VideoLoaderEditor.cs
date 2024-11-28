@@ -8,7 +8,7 @@ public class VideoLoaderEditor : Editor
     {
         VideoLoader videoLoader = (VideoLoader)target;
 
-        string[] videoFiles = System.IO.Directory.GetFiles(Application.streamingAssetsPath, "*.mp4");
+        string[] videoFiles = System.IO.Directory.GetFiles(Application.streamingAssetsPath, "*.webm");
 
         string[] fileNames = new string[videoFiles.Length];
         for (int i = 0; i < videoFiles.Length; i++)
