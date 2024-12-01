@@ -1,16 +1,20 @@
 using UnityEngine;
-using UniversalMobileController;
-using YG;
 
 public class PlayerController : MonoBehaviour
 {
     public float speed = 5f;
+    public float runSpeed = 10f; // Ускорение
     public float jumpForce = 10f;
     public float crouchSpeed = 2f;
     public float mouseSensitivity = 2f;
     public float crouchHeight = 1f;
     public float climbSpeed = 3f;
     public Transform cameraTransform;
+    public float headClearance = 0.5f;
+    public float characterHeight = 2f;
+    public float gravity = -9.81f; // Гравитация
+    public float jumpGravityMultiplier = 1.5f;
+    public static PlayerController instance;
 
     private CharacterController controller;
     private Vector3 velocity;
@@ -20,20 +24,12 @@ public class PlayerController : MonoBehaviour
     private float currentSpeed;
     private bool isCrouching = false;
     private bool isClimbing = false;
-    public float Charectereight = 2f;
-    float horizontal, vertical;
-    [SerializeField] FloatingJoyStick joyStick;
+    private bool isJumping = false;
 
-    public static PlayerController instance;
     void Start()
     {
-        instance = this;
         controller = GetComponent<CharacterController>();
-        if (YandexGame.EnvironmentData.isDesktop)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
+        Cursor.lockState = CursorLockMode.Locked;
         currentSpeed = speed;
     }
 
@@ -45,46 +41,76 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if (YandexGame.EnvironmentData.isDesktop)
+            // Получаем ввод от игрока
+            float horizontal = Input.GetAxis("Horizontal");
+            float vertical = Input.GetAxis("Vertical");
+            Vector3 move = (transform.forward * vertical + transform.right * horizontal);
+
+            // Проверка на смену состояния приседания
+            if (Input.GetKeyDown(KeyCode.LeftControl))
             {
-                horizontal = Input.GetAxis("Horizontal");
-                vertical = Input.GetAxis("Vertical");
+                if (isCrouching && !IsOverheadObstructed())
+                {
+                    StandUp();
+                }
+                else if (!IsOverheadObstructed())
+                {
+                    Crouch();
+                }
+            }
+
+            // Обработка бега
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                currentSpeed = runSpeed; // Увеличиваем скорость для бега
             }
             else
             {
-                horizontal = joyStick.GetHorizontalValue();
-                vertical = joyStick.GetVerticalValue();
+                currentSpeed = speed; // Сбрасываем скорость на обычную
             }
-            
 
-            Vector3 move = (transform.forward * vertical + transform.right * horizontal) * currentSpeed;
+            // Движение
+            controller.Move(move * currentSpeed * Time.deltaTime);
 
-            if (Input.GetKeyDown(KeyCode.LeftControl))
+            // Прыжок
+            if (isGrounded && Input.GetButtonDown("Jump"))
             {
-                isCrouching = !isCrouching;
-                currentSpeed = isCrouching ? crouchSpeed : speed;
-                controller.height = isCrouching ? crouchHeight : Charectereight;
+                velocity.y = jumpForce;
+                isJumping = true;
             }
 
-            if (Input.GetButtonDown("Jump"))
-            {
-                Jump();
-            }
+            // Применение гравитации
+            float gravityMultiplier = isJumping ? jumpGravityMultiplier : 1;
+            velocity.y += gravity * gravityMultiplier * Time.deltaTime;
 
-            velocity.y += Physics.gravity.y * Time.deltaTime;
-            controller.Move(move * Time.deltaTime + velocity * Time.deltaTime);
+            // Перемещение с применением гравитации
+            controller.Move(velocity * Time.deltaTime);
             isGrounded = controller.isGrounded;
+            isJumping = !isGrounded;
         }
 
-       // HandleCameraRotation();
+        HandleCameraRotation();
     }
 
-    public void Jump()
+    private void Crouch()
     {
-        if (isGrounded)
-        {
-            velocity.y = jumpForce;
-        }
+        isCrouching = true;
+        currentSpeed = crouchSpeed;
+        controller.height = crouchHeight;
+    }
+
+    private void StandUp()
+    {
+        isCrouching = false;
+        currentSpeed = speed;
+        controller.height = characterHeight;
+    }
+
+    private bool IsOverheadObstructed()
+    {
+        Vector3 rayOrigin = transform.position + Vector3.up * (controller.height);
+        RaycastHit hit;
+        return Physics.Raycast(rayOrigin, Vector3.up, out hit, headClearance);
     }
 
     private void HandleClimbing()
@@ -98,33 +124,32 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    //private void HandleCameraRotation()
-    //{
-    //    float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
-    //    float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
+    private void HandleCameraRotation()
+    {
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
 
-    //    xRotation -= mouseY;
-    //    xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-    //    yRotation += mouseX;
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        yRotation += mouseX;
 
-    //    cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-    //    transform.rotation = Quaternion.Euler(0f, yRotation, 0f);
-    //}
+        cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        transform.rotation = Quaternion.Euler(0f, yRotation, 0f);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Ladder"))
+        {
+            isClimbing = true;
+            velocity = Vector3.zero;
+        }
+    }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.CompareTag("Ladder"))
-    //    {
-    //        isClimbing = true;
-    //        velocity = Vector3.zero;
-    //    }
-    //}
-
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (other.CompareTag("Ladder"))
-    //    {
-    //        isClimbing = false;
-    //    }
-    //}
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Ladder"))
+        {
+            isClimbing = false;
+        }
+    }
 }
