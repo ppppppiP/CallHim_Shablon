@@ -3,12 +3,7 @@ guid: 1d1a5ab5217b880449c8d6da0cdb01ff
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: CastleGowna
-    second: {fileID: 2100000, guid: 12ab6bf954a793048a314c2cccf264ff, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

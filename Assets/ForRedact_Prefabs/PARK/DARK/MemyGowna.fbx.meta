@@ -3,12 +3,7 @@ guid: 5dc09c2dc906bcc4a82144c9395c0c1c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Abobka
-    second: {fileID: 2100000, guid: e67971f599f163a4889d8a2a6c0dfe08, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
