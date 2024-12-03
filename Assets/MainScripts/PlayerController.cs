@@ -11,13 +11,9 @@ public class PlayerController : MonoBehaviour
     public float climbSpeed = 3f;
     public Transform cameraTransform;
     public float headClearance = 0.5f;
-    public float characterHeight = 2f;
     public float gravity = -9.81f;
-    private float jumpGravityMultiplier = 1.5f;
-    public float fallSpeed = 2f;
-    public float climbAngleThreshold = 30f;
+    public float fallSpeed = 3f;
     public static PlayerController instance;
-
     private CharacterController controller;
     private Vector3 velocity;
     private bool isGrounded;
@@ -40,13 +36,16 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        isGrounded = CheckGround();
-
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
         jumpInput = Input.GetButtonDown("Jump");
         crouchInput = Input.GetKeyDown(KeyCode.LeftControl);
+        HandleCameraRotation();
+    }
 
+    void FixedUpdate()
+    {
+        isGrounded = CheckGround();
         if (isClimbing)
         {
             HandleClimbing();
@@ -55,20 +54,19 @@ public class PlayerController : MonoBehaviour
         {
             HandleJump();
             HandleCrouch();
+            ApplyGravity();
+            HandleMovement();
         }
-
-        HandleCameraRotation();
     }
 
     private bool CheckGround()
     {
-        return Physics.CheckSphere(transform.position + Vector3.down * (controller.height / 2), 0.1f);
+        return Physics.CheckSphere(transform.position + Vector3.down * 0.1f, 0.1f);
     }
 
     private void HandleMovement()
     {
         Vector3 move = transform.right * horizontalInput + transform.forward * verticalInput;
-
         if (isCrouching)
         {
             controller.Move(move * crouchSpeed * Time.fixedDeltaTime);
@@ -110,15 +108,7 @@ public class PlayerController : MonoBehaviour
     {
         if (jumpInput && isGrounded)
         {
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.5f))
-            {
-                float surfaceAngle = Vector3.Angle(hit.normal, Vector3.up);
-                if (surfaceAngle <= climbAngleThreshold)
-                {
-                    velocity.y = jumpForce;
-                }
-            }
+            velocity.y = jumpForce;
         }
     }
 
@@ -130,8 +120,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            float gravityMultiplier = isGrounded ? 1 : jumpGravityMultiplier;
-            velocity.y += gravity * gravityMultiplier * Time.fixedDeltaTime;
+            velocity.y += gravity * Time.fixedDeltaTime;
         }
         controller.Move(velocity * Time.fixedDeltaTime);
     }
@@ -160,16 +149,6 @@ public class PlayerController : MonoBehaviour
     private bool IsOverheadObstructed()
     {
         Vector3 rayOrigin = transform.position + Vector3.up * (controller.height);
-        RaycastHit hit;
-        return Physics.Raycast(rayOrigin, Vector3.up, out hit, headClearance);
-    }
-
-    void FixedUpdate()
-    {
-        if (!isClimbing)
-        {
-            HandleMovement();
-            ApplyGravity();
-        }
+        return Physics.Raycast(rayOrigin, Vector3.up, headClearance);
     }
 }
