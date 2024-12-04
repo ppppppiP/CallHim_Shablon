@@ -13,7 +13,7 @@ namespace YG
         public bool promptDone;
 
         // Тестовые сохранения для демо сцены
-        public int money = 1;
+        public int money = 25;
         public string newPlayerName = "Hello!";
         public bool[] openLevels = new bool[3];
         public float sensitivity = 100f;
