@@ -22,8 +22,8 @@ public class PlayerController : MonoBehaviour
     private float currentSpeed;
     private bool isCrouching = false;
     private bool isClimbing = false;
-    public float climbAngleThreshold = 30f;
     public static PlayerController instance;
+    //public float climbAngleThreshold = 30f;
 
     void Start()
     {
@@ -76,11 +76,11 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.5f))
         {
-            float surfaceAngle = Vector3.Angle(hit.normal, Vector3.up);
-            if (surfaceAngle <= climbAngleThreshold)
-            {
-                velocity.y = jumpForce;
-            }
+            //float surfaceAngle = Vector3.Angle(hit.normal, Vector3.up);
+            //if (surfaceAngle <= climbAngleThreshold)
+            //{
+            velocity.y = jumpForce;
+            //}
         }
     }
 
@@ -139,20 +139,20 @@ xRotation -= mouseY;
         yRotation += mouseX; cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         transform.rotation = Quaternion.Euler(0f, yRotation, 0f);
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Ladder"))
-        {
-            isClimbing = true;
-            velocity = Vector3.zero;
-        }
-    }
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.CompareTag("Ladder"))
+    //    {
+    //        isClimbing = true;
+    //        velocity = Vector3.zero;
+    //    }
+    //}
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Ladder"))
-        {
-            isClimbing = false;
-        }
-    }
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.CompareTag("Ladder"))
+    //    {
+    //        isClimbing = false;
+    //    }
+    //}
 }
