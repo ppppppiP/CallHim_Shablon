@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,8 +13,11 @@ public class PlayerController : MonoBehaviour
     public float headClearance = 0.5f;
     public float characterHeight = 2f;
     public float gravity = -9.81f;
+    public static PlayerController instance;
     private float jumpGravityMultiplier = 1.5f;
     private float fallSpeed = 2f;
+    public float slideSpeed = 10f;
+    public float slideAngleThreshold = 20f;
     private CharacterController controller;
     private Vector3 velocity;
     private bool isGrounded;
@@ -22,8 +26,10 @@ public class PlayerController : MonoBehaviour
     private float currentSpeed;
     private bool isCrouching = false;
     private bool isClimbing = false;
-    public static PlayerController instance;
-    //public float climbAngleThreshold = 30f;
+    private Vector3 smoothedSlideDirection = Vector3.zero;
+    private const int smoothingFrames = 5;
+    private Queue<Vector3> slideDirectionQueue = new Queue<Vector3>();
+
 
     void Start()
     {
@@ -48,7 +54,7 @@ public class PlayerController : MonoBehaviour
             }
             ApplyGravity();
         }
-        //HandleCameraRotation();
+        HandleCameraRotation();
     }
 
     private void HandleMovement()
@@ -56,6 +62,26 @@ public class PlayerController : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         Vector3 move = transform.right * horizontal + transform.forward * vertical;
+
+        if (isGrounded)
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, controller.height + 0.5f))
+            {
+                float slopeAngle = Vector3.Angle(hit.normal, Vector3.up);
+                if (slopeAngle > slideAngleThreshold)
+                {
+                    Vector3 slideDirection = Vector3.ProjectOnPlane(hit.normal, Vector3.up).normalized;
+                    slideDirectionQueue.Enqueue(slideDirection);
+                    if (slideDirectionQueue.Count > smoothingFrames) slideDirectionQueue.Dequeue();
+                    smoothedSlideDirection = Vector3.zero;
+                    foreach (var dir in slideDirectionQueue) smoothedSlideDirection += dir;
+                    smoothedSlideDirection /= slideDirectionQueue.Count;
+                    controller.Move(smoothedSlideDirection * slideSpeed * Time.deltaTime);
+                    return;
+                }
+            }
+        }
 
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
@@ -69,19 +95,11 @@ public class PlayerController : MonoBehaviour
             }
         }
         controller.Move(move * currentSpeed * Time.deltaTime);
-   }
+    }
 
     private void Jump()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.5f))
-        {
-            //float surfaceAngle = Vector3.Angle(hit.normal, Vector3.up);
-            //if (surfaceAngle <= climbAngleThreshold)
-            //{
-            velocity.y = jumpForce;
-            //}
-        }
+        velocity.y = jumpForce;
     }
 
     private void ApplyGravity()
@@ -129,30 +147,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    /*private void HandleCameraRotation()
+    private void HandleCameraRotation()
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
 
-xRotation -= mouseY;
+        xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-        yRotation += mouseX; cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        transform.rotation = Quaternion.Euler(0f, yRotation, 0f);
-    }*/
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.CompareTag("Ladder"))
-    //    {
-    //        isClimbing = true;
-    //        velocity = Vector3.zero;
-    //    }
-    //}
-
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (other.CompareTag("Ladder"))
-    //    {
-    //        isClimbing = false;
-    //    }
-    //}
+        cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        transform.Rotate(Vector3.up * mouseX);
+    }
 }
