@@ -13,13 +13,13 @@ public class PlayerController : MonoBehaviour
     public float headClearance = 0.5f;
     public float characterHeight = 2f;
     public float gravity = -9.81f;
-    public static PlayerController instance;
     private float jumpGravityMultiplier = 1.5f;
     private float fallSpeed = 2f;
     public float slideSpeed = 10f;
     public float slideAngleThreshold = 20f;
     private CharacterController controller;
     private Vector3 velocity;
+    public static PlayerController instance;
     private bool isGrounded;
     private float xRotation = 0f;
     private float yRotation = 0f;
@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded)
         {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, Vector3.down, out hit, controller.height + 0.5f))
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, controller.height + 3f))
             {
                 float slopeAngle = Vector3.Angle(hit.normal, Vector3.up);
                 if (slopeAngle > slideAngleThreshold)
@@ -122,7 +122,6 @@ public class PlayerController : MonoBehaviour
         currentSpeed = crouchSpeed;
         controller.height = crouchHeight;
     }
-
     private void StandUp()
     {
         isCrouching = false;
