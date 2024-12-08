@@ -1566,6 +1566,74 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27a8b8dc6362a71458bbb51ab2f1250e, type: 3}
+--- !u!1001 &1302158703823382743
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1293924943828752752, guid: 71dac82d0010105418ad268752c23f3d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -367.92993
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293924943828752752, guid: 71dac82d0010105418ad268752c23f3d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.889942
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293924943828752752, guid: 71dac82d0010105418ad268752c23f3d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 186.66048
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293924943828752752, guid: 71dac82d0010105418ad268752c23f3d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293924943828752752, guid: 71dac82d0010105418ad268752c23f3d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293924943828752752, guid: 71dac82d0010105418ad268752c23f3d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293924943828752752, guid: 71dac82d0010105418ad268752c23f3d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293924943828752752, guid: 71dac82d0010105418ad268752c23f3d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293924943828752752, guid: 71dac82d0010105418ad268752c23f3d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1293924943828752752, guid: 71dac82d0010105418ad268752c23f3d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927295780542890954, guid: 71dac82d0010105418ad268752c23f3d,
+        type: 3}
+      propertyPath: m_Name
+      value: GreenKnightAnim
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 71dac82d0010105418ad268752c23f3d, type: 3}
 --- !u!4 &1303308875654434453 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 475369696194662, guid: 71e82b3b380441c4a94f29da01235bfa,
@@ -6008,3 +6076,4 @@ SceneRoots:
   - {fileID: 1034739495076920713}
   - {fileID: 4587104960558385056}
   - {fileID: 656573131410661032}
+  - {fileID: 1302158703823382743}
