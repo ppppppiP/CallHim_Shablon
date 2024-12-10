@@ -16,10 +16,10 @@ public class PlayerController : MonoBehaviour
     private float jumpGravityMultiplier = 1.5f;
     private float fallSpeed = 2f;
     public float slideSpeed = 10f;
+    public static PlayerController instance;
     public float slideAngleThreshold = 20f;
     private CharacterController controller;
     private Vector3 velocity;
-    public static PlayerController instance;
     private bool isGrounded;
     private float xRotation = 0f;
     private float yRotation = 0f;
@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviour
     private Vector3 smoothedSlideDirection = Vector3.zero;
     private const int smoothingFrames = 5;
     private Queue<Vector3> slideDirectionQueue = new Queue<Vector3>();
-
 
     void Start()
     {
@@ -66,7 +65,10 @@ public class PlayerController : MonoBehaviour
         if (isGrounded)
         {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, Vector3.down, out hit, controller.height + 3f))
+            Vector3 sphereOrigin = transform.position + Vector3.down * 0.1f;
+            bool hasHit = Physics.SphereCast(sphereOrigin, controller.radius, Vector3.down, out hit, controller.height / 2 + 0.5f);
+
+            if (hasHit)
             {
                 float slopeAngle = Vector3.Angle(hit.normal, Vector3.up);
                 if (slopeAngle > slideAngleThreshold)
@@ -122,12 +124,14 @@ public class PlayerController : MonoBehaviour
         currentSpeed = crouchSpeed;
         controller.height = crouchHeight;
     }
+
     private void StandUp()
     {
         isCrouching = false;
         currentSpeed = speed;
         controller.height = characterHeight;
     }
+
     private bool IsOverheadObstructed()
     {
         Vector3 rayOrigin = transform.position + Vector3.up * (controller.height);
