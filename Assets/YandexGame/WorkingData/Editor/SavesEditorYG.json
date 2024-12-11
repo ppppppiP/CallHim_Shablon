@@ -1,9 +1,9 @@
 {
-  "idSave": 96,
+  "idSave": 112,
   "isFirstSession": false,
   "language": "ru",
   "promptDone": false,
-  "money": 37,
+  "money": 32,
   "newPlayerName": "Hello!",
   "openLevels": [
     false,
@@ -15,8 +15,8 @@
   "VideoName": [
     "Video16",
     "Video20",
-    null,
-    null,
+    "Video17",
+    "Video12",
     null,
     null,
     null,
@@ -37,8 +37,8 @@
   "VideoBool": [
     true,
     true,
-    false,
-    false,
+    true,
+    true,
     false,
     false,
     false,
