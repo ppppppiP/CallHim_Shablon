@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5499989883545162581}
   - component: {fileID: 3385700643300879517}
   - component: {fileID: 6965000728346018444}
+  - component: {fileID: 1487364293903154811}
   m_Layer: 0
   m_Name: RockWall
   m_TagString: Untagged
@@ -27,13 +28,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2483541902514058664}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: -51.113464, y: 0.5530133, z: -10.659268}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2.35}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!33 &5499989883545162581
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -105,3 +106,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.79912007, y: 0.79911995, z: 43.49}
   m_Center: {x: 0, y: 0, z: 0.57894653}
+--- !u!205 &1487364293903154811
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2483541902514058664}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.000060796738, y: 0.000060915947, z: 0.57894135}
+  m_Size: 3.157895
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.031152202
+    fadeTransitionWidth: 0.2
+    renderers:
+    - renderer: {fileID: 3385700643300879517}
+  m_Enabled: 1

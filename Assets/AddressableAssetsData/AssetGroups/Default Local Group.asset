@@ -17,8 +17,8 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 3da89146ec6b1c54cb34a7e88e62cbe1
   m_SerializeEntries:
-  - m_GUID: d62ecf2b611069349a6de7686a2fd260
-    m_Address: Assets/MainScenes/ScholaGovna.unity
+  - m_GUID: caa0226737ebbff4cbff20e835d93f5b
+    m_Address: Assets/MainScenes/PARK/Park_END.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

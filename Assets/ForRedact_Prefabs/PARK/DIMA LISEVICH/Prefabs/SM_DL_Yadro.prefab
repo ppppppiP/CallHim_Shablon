@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1665926894392918204}
   - component: {fileID: 7702377494406155496}
   - component: {fileID: 6676575431865458616}
-  - component: {fileID: 4647993396505957687}
+  - component: {fileID: 7081651905679516882}
   m_Layer: 0
   m_Name: SM_DL_Yadro
   m_TagString: Untagged
@@ -27,9 +27,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586357967867767856}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -207.1478, y: -0.08616251, z: -2.6290526}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.971, y: 2.9709997, z: 2.9710002}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,25 +84,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &4647993396505957687
-MeshCollider:
+--- !u!205 &7081651905679516882
+LODGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586357967867767856}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.000061035156, y: 0.16785324, z: -0.000076293945}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.050795484
+    fadeTransitionWidth: 0.09
+    renderers:
+    - renderer: {fileID: 6676575431865458616}
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -679764822187922197, guid: 285579db078377b4b81a563a69488679, type: 3}

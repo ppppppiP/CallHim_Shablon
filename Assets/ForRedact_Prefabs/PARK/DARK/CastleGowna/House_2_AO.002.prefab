@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 717383829897888939}
   - component: {fileID: 1117841950379916276}
   - component: {fileID: 4651945799533517858}
+  - component: {fileID: 6987814921230341203}
   m_Layer: 0
   m_Name: House_2_AO.002
   m_TagString: Untagged
@@ -27,9 +28,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2877965736473586154}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.54956555, y: 8.1926565, z: 61.3452}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 8.565834, y: 8.565834, z: 8.565834}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -103,6 +104,25 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6625966329985479263, guid: 1d1a5ab5217b880449c8d6da0cdb01ff, type: 3}
+--- !u!205 &6987814921230341203
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2877965736473586154}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.000012874603, y: 1.4532629, z: -0.000003516674}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.049237814
+    fadeTransitionWidth: 0.04
+    renderers:
+    - renderer: {fileID: 1117841950379916276}
+  m_Enabled: 1

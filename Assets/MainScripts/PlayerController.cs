@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UniversalMobileController;
+using YG;
 
 public class PlayerController : MonoBehaviour
 {
@@ -29,12 +31,18 @@ public class PlayerController : MonoBehaviour
     private Vector3 smoothedSlideDirection = Vector3.zero;
     private const int smoothingFrames = 5;
     private Queue<Vector3> slideDirectionQueue = new Queue<Vector3>();
-
-
+    [SerializeField] FloatingJoyStick joyStick;
+    float horizontal;
+    float vertical;
     void Start()
     {
+        instance = this;
         controller = GetComponent<CharacterController>();
-        Cursor.lockState = CursorLockMode.Locked;
+        if (YandexGame.EnvironmentData.isDesktop)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
         currentSpeed = speed;
     }
 
@@ -54,13 +62,22 @@ public class PlayerController : MonoBehaviour
             }
             ApplyGravity();
         }
-        HandleCameraRotation();
+        //HandleCameraRotation();
     }
 
     private void HandleMovement()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+       
+        if (YandexGame.EnvironmentData.isDesktop)
+        {
+            horizontal = Input.GetAxis("Horizontal");
+            vertical = Input.GetAxis("Vertical");
+        }
+        else
+        {
+            horizontal = joyStick.GetHorizontalValue();
+            vertical = joyStick.GetVerticalValue();
+        }
         Vector3 move = transform.right * horizontal + transform.forward * vertical;
 
         if (isGrounded)
@@ -149,14 +166,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void HandleCameraRotation()
-    {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
+    //private void HandleCameraRotation()
+    //{
+    //    float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
+    //    float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
 
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-        cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        transform.Rotate(Vector3.up * mouseX);
-    }
+    //    xRotation -= mouseY;
+    //    xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+    //    cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+    //    transform.Rotate(Vector3.up * mouseX);
+    //}
 }

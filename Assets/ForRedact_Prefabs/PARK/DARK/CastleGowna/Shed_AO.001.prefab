@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6268392459674661412}
   - component: {fileID: 5075195984336849357}
   - component: {fileID: 2178274417030404554}
+  - component: {fileID: 4852136706873459094}
   m_Layer: 0
   m_Name: Shed_AO.001
   m_TagString: Untagged
@@ -27,9 +28,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4192384465400753281}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.3857584, y: 7.850046, z: 63.734795}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 6.052706, y: 6.0527067, z: 6.052706}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -103,6 +104,25 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2684493524995668671, guid: 1d1a5ab5217b880449c8d6da0cdb01ff, type: 3}
+--- !u!205 &4852136706873459094
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4192384465400753281}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.47835237, y: 0.52042645, z: -0.3021257}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.028726516
+    fadeTransitionWidth: 0.17
+    renderers:
+    - renderer: {fileID: 5075195984336849357}
+  m_Enabled: 1

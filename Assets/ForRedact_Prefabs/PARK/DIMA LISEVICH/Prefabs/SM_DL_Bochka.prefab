@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 948404637699267037}
   - component: {fileID: 4178282566914304888}
   - component: {fileID: 8828965618818589912}
+  - component: {fileID: 3744072761701272001}
   m_Layer: 0
   m_Name: SM_DL_Bochka
   m_TagString: Untagged
@@ -27,9 +28,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7522412759522715577}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -209.50615, y: -0.09588951, z: -2.8611016}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.6002002, y: 2.6002002, z: 2.6002002}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -103,6 +104,25 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6957324462720033516, guid: 285579db078377b4b81a563a69488679, type: 3}
+--- !u!205 &3744072761701272001
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7522412759522715577}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.000000059604645, y: 0.3648512, z: 0.000061005354}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.016170034
+    fadeTransitionWidth: 0.09
+    renderers:
+    - renderer: {fileID: 4178282566914304888}
+  m_Enabled: 1

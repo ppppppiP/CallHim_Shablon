@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3694517207454992859}
   - component: {fileID: 7444839889937514023}
   - component: {fileID: 2016241831376968374}
+  - component: {fileID: 36081013790011373}
   m_Layer: 0
   m_Name: Stones_4_AO.012
   m_TagString: Untagged
@@ -27,9 +28,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5376455766724604602}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.8915226, y: 5.272259, z: 42.032425}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.65794, y: 2.6579397, z: 2.6579397}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -103,6 +104,24 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2476603333171950788, guid: 1d1a5ab5217b880449c8d6da0cdb01ff, type: 3}
+--- !u!205 &36081013790011373
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5376455766724604602}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.027549347
+    fadeTransitionWidth: 0.2
+    renderers: []
+  m_Enabled: 1

@@ -9,7 +9,7 @@ public class CameraOnEvent : MonoBehaviour
     void Start()
     {
         button = GetComponent<Button>();
-        button.onClick.AddListener(()=>PlayerController.instance.gameObject.SetActive(true));
+        button.onClick.AddListener(()=>Pla.instance.gameObject.SetActive(true));
     }
 
     // Update is called once per frame

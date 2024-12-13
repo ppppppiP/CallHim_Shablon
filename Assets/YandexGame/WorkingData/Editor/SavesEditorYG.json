@@ -1,16 +1,16 @@
 {
-  "idSave": 112,
+  "idSave": 190,
   "isFirstSession": false,
   "language": "ru",
   "promptDone": false,
-  "money": 32,
+  "money": 35,
   "newPlayerName": "Hello!",
   "openLevels": [
     false,
     false,
     false
   ],
-  "sensitivity": 301.521484,
+  "sensitivity": 661.434265,
   "videoStates": {},
   "VideoName": [
     "Video16",

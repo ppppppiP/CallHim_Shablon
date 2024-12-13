@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 485542191685082634}
   - component: {fileID: 5338839175287668978}
   - component: {fileID: 4165153108737211922}
+  - component: {fileID: 2064570813293613740}
   m_Layer: 0
   m_Name: SM_DL_Pushka
   m_TagString: Untagged
@@ -27,9 +28,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4826806234937681672}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -207.51964, y: -0.09481111, z: -3.2194395}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.9709995, y: 2.971, z: 2.9710002}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -103,6 +104,25 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1378061998002599439, guid: 285579db078377b4b81a563a69488679, type: 3}
+--- !u!205 &2064570813293613740
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4826806234937681672}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.079652905, y: 0.26342103, z: -0.000121861696}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.02526635
+    fadeTransitionWidth: 0.14
+    renderers:
+    - renderer: {fileID: 5338839175287668978}
+  m_Enabled: 1

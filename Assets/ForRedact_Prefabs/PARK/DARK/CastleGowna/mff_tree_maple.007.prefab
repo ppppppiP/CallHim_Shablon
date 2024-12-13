@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1069232267533225308}
   - component: {fileID: 2175382646877459387}
   - component: {fileID: 4231316378555200872}
+  - component: {fileID: 5596254109256668524}
   m_Layer: 0
   m_Name: mff_tree_maple.007
   m_TagString: Untagged
@@ -27,9 +28,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8367016933653814764}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16.534689, y: 10.727178, z: 67.66491}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.3626096, y: 3.3626094, z: 3.3626096}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -103,6 +104,25 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8626579881696934645, guid: 1d1a5ab5217b880449c8d6da0cdb01ff, type: 3}
+--- !u!205 &5596254109256668524
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8367016933653814764}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.37624943, y: 1.4015149, z: 0.09763813}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.043244947
+    fadeTransitionWidth: 0.23
+    renderers:
+    - renderer: {fileID: 2175382646877459387}
+  m_Enabled: 1

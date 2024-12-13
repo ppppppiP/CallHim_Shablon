@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8384847845830048404}
   - component: {fileID: 5315704716606714816}
   - component: {fileID: 7471629762016840277}
+  - component: {fileID: 8063990601037120292}
   m_Layer: 0
   m_Name: VikingShipObjects.025
   m_TagString: Untagged
@@ -27,9 +28,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8248662200172464873}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.893216, y: 1.5545527, z: 38.314484}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.6774118, y: 3.6774118, z: 3.6774118}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -103,6 +104,25 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4586995927320715814, guid: 1d1a5ab5217b880449c8d6da0cdb01ff, type: 3}
+--- !u!205 &8063990601037120292
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8248662200172464873}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 1.9507829, y: 3.4661295, z: -0.76877165}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.01802497
+    fadeTransitionWidth: 0.04
+    renderers:
+    - renderer: {fileID: 5315704716606714816}
+  m_Enabled: 1

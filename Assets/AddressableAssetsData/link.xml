@@ -1,12 +1,12 @@
 <linker>
   <assembly fullname="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="AddScores" preserve="all" />
+    <type fullname="AnimationsController" preserve="all" />
     <type fullname="Banner" preserve="all" />
     <type fullname="Bird" preserve="all" />
     <type fullname="ButtonEventHandler" preserve="all" />
     <type fullname="CameraLook" preserve="all" />
     <type fullname="CameraOnEvent" preserve="all" />
-    <type fullname="DesctopASetFalse" preserve="all" />
     <type fullname="EnableInActive" preserve="all" />
     <type fullname="FixedTouchField" preserve="all" />
     <type fullname="FlappyBirdInstaller" preserve="all" />
@@ -15,6 +15,7 @@
     <type fullname="LoadingObject" preserve="all" />
     <type fullname="LoadVideoButtonClick" preserve="all" />
     <type fullname="LocalGameManager" preserve="all" />
+    <type fullname="MeshCombiner" preserve="all" />
     <type fullname="MiniGameController" preserve="all" />
     <type fullname="MobileASetFalse" preserve="all" />
     <type fullname="OpenerMenu" preserve="all" />
@@ -36,6 +37,7 @@
     <type fullname="VideoLoader" preserve="all" />
     <type fullname="VideoManager" preserve="all" />
     <type fullname="YG.InfoYG" preserve="all" />
+    <type fullname="YG.LanguageYG" preserve="all" />
     <type fullname="YG.ViewingAdsYG" preserve="all" />
     <type fullname="YG.YandexGame" preserve="all" />
     <type fullname="Outline/ListVector3" preserve="nothing" serialized="true" />
@@ -100,6 +102,7 @@
     <type fullname="UnityEngine.Light" preserve="all" />
     <type fullname="UnityEngine.LightmapSettings" preserve="all" />
     <type fullname="UnityEngine.LightProbes" preserve="all" />
+    <type fullname="UnityEngine.LODGroup" preserve="all" />
     <type fullname="UnityEngine.Material" preserve="all" />
     <type fullname="UnityEngine.Mesh" preserve="all" />
     <type fullname="UnityEngine.MeshFilter" preserve="all" />
@@ -110,6 +113,7 @@
     <type fullname="UnityEngine.RenderSettings" preserve="all" />
     <type fullname="UnityEngine.RenderTexture" preserve="all" />
     <type fullname="UnityEngine.Shader" preserve="all" />
+    <type fullname="UnityEngine.SkinnedMeshRenderer" preserve="all" />
     <type fullname="UnityEngine.Sprite" preserve="all" />
     <type fullname="UnityEngine.SpriteRenderer" preserve="all" />
     <type fullname="UnityEngine.Texture2D" preserve="all" />
@@ -126,6 +130,7 @@
   </assembly>
   <assembly fullname="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.BoxCollider" preserve="all" />
+    <type fullname="UnityEngine.CapsuleCollider" preserve="all" />
     <type fullname="UnityEngine.CharacterController" preserve="all" />
     <type fullname="UnityEngine.MeshCollider" preserve="all" />
     <type fullname="UnityEngine.SphereCollider" preserve="all" />

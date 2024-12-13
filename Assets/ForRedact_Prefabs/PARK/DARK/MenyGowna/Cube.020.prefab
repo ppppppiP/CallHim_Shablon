@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4515455756482054917}
   - component: {fileID: 6138118217176566214}
   - component: {fileID: 7296641417933332714}
+  - component: {fileID: 8660737546163242458}
   m_Layer: 0
   m_Name: Cube.020
   m_TagString: Untagged
@@ -27,9 +28,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4378372192737599782}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -60.36226, y: -5.2988706, z: 5.147072}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7513001, y: 1.7513, z: 1.7513001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -103,6 +104,25 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2911736426955009642, guid: 5dc09c2dc906bcc4a82144c9395c0c1c, type: 3}
+--- !u!205 &8660737546163242458
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4378372192737599782}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.08130801, y: 0.07727146, z: -0.08117384}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.017085612
+    fadeTransitionWidth: 0.21
+    renderers:
+    - renderer: {fileID: 6138118217176566214}
+  m_Enabled: 1

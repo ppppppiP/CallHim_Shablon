@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 713634287116165872}
   - component: {fileID: 2956347216291572063}
   - component: {fileID: 8042813966606448907}
-  - component: {fileID: 2732521862532027090}
+  - component: {fileID: 7698884454912300863}
   m_Layer: 0
   m_Name: Paving_1_AO.000
   m_TagString: Untagged
@@ -27,9 +27,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6466500062404829860}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.0739765, y: 6.675644, z: 65.5125}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.6686032, y: 3.6686022, z: 3.6686032}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,25 +84,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2732521862532027090
-MeshCollider:
+--- !u!205 &7698884454912300863
+LODGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6466500062404829860}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.0024456382, y: 0.016182033, z: 0.000030636787}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.022020215
+    fadeTransitionWidth: 0.12
+    renderers:
+    - renderer: {fileID: 8042813966606448907}
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2389551068579324743, guid: 1d1a5ab5217b880449c8d6da0cdb01ff, type: 3}
