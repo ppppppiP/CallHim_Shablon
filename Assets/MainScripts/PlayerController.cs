@@ -66,7 +66,10 @@ public class PlayerController : MonoBehaviour
         if (isGrounded)
         {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, Vector3.down, out hit, controller.height + 3f))
+            Vector3 sphereOrigin = transform.position + Vector3.down * 0.1f;
+            bool hasHit = Physics.SphereCast(sphereOrigin, controller.radius + 0.5f, Vector3.down, out hit, controller.height / 2 + 0.1f);
+
+            if (hasHit)
             {
                 float slopeAngle = Vector3.Angle(hit.normal, Vector3.up);
                 if (slopeAngle > slideAngleThreshold)
