@@ -15,7 +15,6 @@
     <type fullname="LoadingObject" preserve="all" />
     <type fullname="LoadVideoButtonClick" preserve="all" />
     <type fullname="LocalGameManager" preserve="all" />
-    <type fullname="MeshCombiner" preserve="all" />
     <type fullname="MiniGameController" preserve="all" />
     <type fullname="MobileASetFalse" preserve="all" />
     <type fullname="OpenerMenu" preserve="all" />

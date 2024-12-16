@@ -110837,6 +110837,7 @@ MonoBehaviour:
   gravity: -20
   slideSpeed: 10
   slideAngleThreshold: 50
+  joyStick: {fileID: 630487500}
 --- !u!23 &1196335041
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -110947,6 +110948,7 @@ MonoBehaviour:
   gravity: -20
   slideSpeed: 10
   slideAngleThreshold: 50
+  joyStick: {fileID: 630487500}
 --- !u!114 &1196335045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110971,6 +110973,7 @@ MonoBehaviour:
   gravity: -20
   slideSpeed: 10
   slideAngleThreshold: 50
+  joyStick: {fileID: 630487500}
 --- !u!1001 &1196670247
 PrefabInstance:
   m_ObjectHideFlags: 0
