@@ -16,7 +16,7 @@ namespace YG
         public int money = 25;
         public string newPlayerName = "Hello!";
         public bool[] openLevels = new bool[3];
-        public float sensitivity = 100f;
+        public float sensitivity;
         // Ваши сохранения
         public Dictionary<string, bool> videoStates = new Dictionary<string, bool>();
         public string[] VideoName = new string[20];
@@ -26,6 +26,14 @@ namespace YG
         // Инициализация полей
         public SavesYG()
         {
+            if (YandexGame.EnvironmentData.isMobile)
+            {
+                sensitivity = 100;
+            }
+            else
+            {
+                sensitivity = 100;
+            }
     
                 VideoName = new string[20];
                 VideoBool = new bool[20];

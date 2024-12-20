@@ -21,18 +21,21 @@
     <type fullname="Outline" preserve="all" />
     <type fullname="Pipe" preserve="all" />
     <type fullname="PipeSpawner" preserve="all" />
+    <type fullname="Pla" preserve="all" />
     <type fullname="PlayerController" preserve="all" />
     <type fullname="Reward" preserve="all" />
+    <type fullname="SceneLoader" preserve="all" />
     <type fullname="SceneLoader22" preserve="all" />
     <type fullname="Scores" preserve="all" />
     <type fullname="SensitivitySlider" preserve="all" />
     <type fullname="SimpleCusorActive" preserve="all" />
     <type fullname="SimpleOnTriggerEvents" preserve="all" />
     <type fullname="SimpleSetActiveFalse" preserve="all" />
-    <type fullname="TouchController" preserve="all" />
+    <type fullname="StartEvent" preserve="all" />
     <type fullname="UniversalMobileController.FloatingJoyStick" preserve="all" />
     <type fullname="UniversalMobileController.MobileUIButton" preserve="all" />
     <type fullname="UniversalMobileController.SpecialButton" preserve="all" />
+    <type fullname="UniversalMobileController.SpecialTouchPad" preserve="all" />
     <type fullname="VideoLoader" preserve="all" />
     <type fullname="VideoManager" preserve="all" />
     <type fullname="YG.InfoYG" preserve="all" />
@@ -56,6 +59,7 @@
   </assembly>
   <assembly fullname="Unity.Addressables, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
     <type fullname="UnityEngine.AddressableAssets.Addressables" preserve="all" />
+    <type fullname="UnityEngine.AddressableAssets.AssetReference" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.Rendering.Universal.UniversalAdditionalCameraData" preserve="all" />

@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public float mouseSensitivity = 2f;
     public float crouchHeight = 1f;
     public float climbSpeed = 3f;
-    public Transform cameraTransform;
+    //public Transform cameraTransform;
     public float headClearance = 0.5f;
     public float characterHeight = 2f;
     public float gravity = -9.81f;
@@ -56,10 +56,8 @@ public class PlayerController : MonoBehaviour
         else
         {
             HandleMovement();
-            if (isGrounded && Input.GetButtonDown("Jump"))
-            {
+            if(Input.GetButtonDown("Jump"))
                 Jump();
-            }
             ApplyGravity();
         }
         //HandleCameraRotation();
@@ -117,9 +115,12 @@ public class PlayerController : MonoBehaviour
         controller.Move(move * currentSpeed * Time.deltaTime);
     }
 
-    private void Jump()
+    public void Jump()
     {
-        velocity.y = jumpForce;
+        if (isGrounded)
+        {
+            velocity.y = jumpForce;
+        }
     }
 
     private void ApplyGravity()

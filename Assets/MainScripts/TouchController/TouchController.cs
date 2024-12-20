@@ -15,7 +15,7 @@ public class TouchController : MonoBehaviour
     
     void Update()
     {
-        if(YandexGame.EnvironmentData.isMobile)
+        //if(YandexGame.EnvironmentData.isMobile)
         _CameraLook.LockAxis = _FixedTouchField.TouchDist;
     }
 }

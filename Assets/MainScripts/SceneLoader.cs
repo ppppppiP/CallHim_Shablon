@@ -11,6 +11,8 @@ public class SceneLoader : MonoBehaviour
 
     private AsyncOperationHandle<SceneInstance> sceneHandle;
 
+    
+
     public void LoadScene()
     {
         if (sceneReference == null)

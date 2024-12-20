@@ -1,7 +1,7 @@
 {
-  "idSave": 190,
+  "idSave": 311,
   "isFirstSession": false,
-  "language": "ru",
+  "language": "en",
   "promptDone": false,
   "money": 35,
   "newPlayerName": "Hello!",
@@ -10,7 +10,7 @@
     false,
     false
   ],
-  "sensitivity": 661.434265,
+  "sensitivity": 36.6217651,
   "videoStates": {},
   "VideoName": [
     "Video16",

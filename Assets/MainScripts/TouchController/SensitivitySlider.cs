@@ -8,6 +8,17 @@ public class SensitivitySlider : MonoBehaviour
 
     void Start()
     {
+        if (YandexGame.EnvironmentData.isMobile)
+        {
+            sensitivitySlider.minValue = 0.2f;
+            sensitivitySlider.maxValue = 100f;
+        }
+        else
+        {
+            sensitivitySlider.minValue = 10f;
+            sensitivitySlider.maxValue = 500f;
+        }
+
         sensitivitySlider.value = YandexGame.savesData.sensitivity;
         sensitivitySlider.onValueChanged.AddListener(UpdateSensitivity);
     }

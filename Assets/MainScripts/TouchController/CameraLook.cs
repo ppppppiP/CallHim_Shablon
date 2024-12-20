@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UniversalMobileController;
 using YG;
 
 public class CameraLook : MonoBehaviour
@@ -13,7 +14,7 @@ public class CameraLook : MonoBehaviour
     [SerializeField] private Transform PlayerBody;
     public Vector2 LockAxis;
     public float Sensitivity = 40f;
-
+    public SpecialTouchPad touchPad;
 
     public float Smoothing = 0.1f; 
     private Vector2 currentLookAxis;
@@ -36,17 +37,21 @@ public class CameraLook : MonoBehaviour
     void Start()
     {
         currentLookAxis = Vector2.zero; // Инициализация
+       
     }
 
     void Update()
     {
+
         if (YandexGame.EnvironmentData.isDesktop)
         {
-            LockAxis = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+            currentLookAxis = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
         }
+        else
+        {
 
-        currentLookAxis = Vector2.Lerp(currentLookAxis, LockAxis, Smoothing * Time.deltaTime);
-
+            currentLookAxis = touchPad.GetHorizontalAndVerticalValue(); //Vector2.Lerp(currentLookAxis, LockAxis, Smoothing * Time.deltaTime);
+        }
         XMove = currentLookAxis.x * Sensitivity * Time.deltaTime;
         YMove = currentLookAxis.y * Sensitivity * Time.deltaTime;
 

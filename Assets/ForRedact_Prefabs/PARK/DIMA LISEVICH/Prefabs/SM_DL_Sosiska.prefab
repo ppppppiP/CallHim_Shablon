@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4029729602751404470}
   - component: {fileID: 2187755606818154061}
   - component: {fileID: 8380769133872044246}
-  - component: {fileID: 2852275646651067604}
+  - component: {fileID: 5268632074110396398}
   m_Layer: 0
   m_Name: SM_DL_Sosiska
   m_TagString: Untagged
@@ -104,14 +104,14 @@ LODGroup:
     renderers:
     - renderer: {fileID: 2187755606818154061}
   m_Enabled: 1
---- !u!114 &2852275646651067604
+--- !u!114 &5268632074110396398
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3686125770755808691}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
