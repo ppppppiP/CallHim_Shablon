@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using YG;
 
 public class SimpleOnTriggerEvents: MonoBehaviour
 {
@@ -57,5 +58,48 @@ public class SimpleOnTriggerEvents: MonoBehaviour
         {
             EOnKeyInTriggerDown?.Invoke();
         }
+    }
+
+    public void EOnTriggerEnterVoid()
+    {
+        EOnTriggerEnter?.Invoke();
+    } 
+    public void EOnTriggerExitVoid()
+    {
+        EOnTriggerExit?.Invoke();
+    } 
+    public void EOnTriggerStayVoid()
+    {
+        EOnTriggerStay?.Invoke();
+    }
+    public void EOnKeyInTriggerDownVoid()
+    {
+        EOnKeyInTriggerDown?.Invoke();
+    }
+}
+public static class SaveSystemHelper
+{
+    public static void SaveKey(string key, bool value)
+    {
+        var keys = YandexGame.savesData.KeysToSave;
+        var states = YandexGame.savesData.KeyStates;
+
+        for (int i = 0; i < keys.Length; i++)
+        {
+            if (keys[i] == key)
+            {
+                states[i] = value; // Обновляем значение, если ключ найден
+                return;
+            }
+
+            if (string.IsNullOrEmpty(keys[i]))
+            {
+                keys[i] = key; // Записываем новый ключ
+                states[i] = value; // Устанавливаем значение
+                return;
+            }
+        }
+
+        Debug.LogWarning("Массив ключей заполнен. Увеличьте его размер.");
     }
 }
