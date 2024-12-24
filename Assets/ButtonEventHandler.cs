@@ -26,6 +26,7 @@ public class ButtonEventHandler : MonoBehaviour
 
     public void SetListener(Action action)
     {
+        if(SpButton!= null)
         SpButton.onButtondown.AddListener(action.Invoke);
     }
 }

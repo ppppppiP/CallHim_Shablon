@@ -22,6 +22,8 @@ public class SimpleOnTriggerEvents: MonoBehaviour
         {
             isEnter = true;
             EOnTriggerEnter?.Invoke();
+
+            if(ButtonEventHandler.instance != null)
             ButtonEventHandler.instance.SetListener(() => MobileInput()) ;
         }
     }
@@ -32,7 +34,8 @@ public class SimpleOnTriggerEvents: MonoBehaviour
         {
             isEnter = false;
             EOnTriggerExit?.Invoke();
-            ButtonEventHandler.instance.RemoveListener();
+            if (ButtonEventHandler.instance != null)
+                ButtonEventHandler.instance.RemoveListener();
         }
     }
 

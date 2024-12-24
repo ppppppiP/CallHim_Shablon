@@ -99181,6 +99181,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 693698317983310330, guid: f78c4151a6d24e54e89c4d0a97383e33,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1974552228140667359, guid: f78c4151a6d24e54e89c4d0a97383e33,
         type: 3}
       propertyPath: m_Icon

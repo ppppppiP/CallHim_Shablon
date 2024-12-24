@@ -24662,7 +24662,7 @@ MonoBehaviour:
           m_StringArgument: door_1
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1491032180}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StartEvent, Assembly-CSharp
         m_MethodName: SetBoolTrue
         m_Mode: 1
@@ -63743,7 +63743,7 @@ MonoBehaviour:
           m_StringArgument: door_1
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1718566194}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StartEvent, Assembly-CSharp
         m_MethodName: SetBoolTrue
         m_Mode: 1
@@ -76235,7 +76235,7 @@ MonoBehaviour:
           m_StringArgument: door_1
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 967500676}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StartEvent, Assembly-CSharp
         m_MethodName: SetBoolTrue
         m_Mode: 1
@@ -79955,7 +79955,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1491032180}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StartEvent, Assembly-CSharp
         m_MethodName: SetBoolTrue
         m_Mode: 1
@@ -85197,10 +85197,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1491032176}
-    - targetCorrespondingSourceObject: {fileID: 6713182664080225691, guid: 5c6927849c1dd324a83efe8eba31406d,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1491032180}
   m_SourcePrefab: {fileID: 100100000, guid: 5c6927849c1dd324a83efe8eba31406d, type: 3}
 --- !u!1 &961936262
 GameObject:
@@ -85520,33 +85516,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &967500676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 967500667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce1b5b30fccb1cd469a2eaf52c4d4b22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onStart:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 967500671}
-        m_TargetAssemblyTypeName: AnimationsController, Assembly-CSharp
-        m_MethodName: SetAnimByName
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: gate2
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &971264526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87633,7 +87602,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1003601951
 Transform:
   m_ObjectHideFlags: 0
@@ -91806,7 +91775,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1718566194}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StartEvent, Assembly-CSharp
         m_MethodName: SetBoolTrue
         m_Mode: 1
@@ -118953,10 +118922,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 967500671}
-    - targetCorrespondingSourceObject: {fileID: 6713182664080225691, guid: 5c6927849c1dd324a83efe8eba31406d,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 967500676}
   m_SourcePrefab: {fileID: 100100000, guid: 5c6927849c1dd324a83efe8eba31406d, type: 3}
 --- !u!1 &1345089426
 GameObject:
@@ -122139,7 +122104,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 967500676}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StartEvent, Assembly-CSharp
         m_MethodName: SetBoolTrue
         m_Mode: 1
@@ -128533,33 +128498,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1491032175}
---- !u!114 &1491032180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491032171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce1b5b30fccb1cd469a2eaf52c4d4b22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onStart:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1491032176}
-        m_TargetAssemblyTypeName: AnimationsController, Assembly-CSharp
-        m_MethodName: SetAnimByName
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: door_1
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &1493795058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -145948,33 +145886,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1718566189}
---- !u!114 &1718566194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1582912219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce1b5b30fccb1cd469a2eaf52c4d4b22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onStart:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1718566189}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: gate3
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1720680868
 GameObject:
   m_ObjectHideFlags: 0
@@ -165903,6 +165814,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: A_int
       objectReference: {fileID: 0}
+    - target: {fileID: 8767873699159259968, guid: e5bfd51f189eb034497689b22f410b80,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -170539,10 +170455,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1718566189}
-    - targetCorrespondingSourceObject: {fileID: 6713182664080225691, guid: 5c6927849c1dd324a83efe8eba31406d,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1718566194}
   m_SourcePrefab: {fileID: 100100000, guid: 5c6927849c1dd324a83efe8eba31406d, type: 3}
 --- !u!1 &1996992782
 GameObject:
@@ -186472,6 +186384,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1136294505}
+    - target: {fileID: 693698317983310330, guid: f78c4151a6d24e54e89c4d0a97383e33,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1162984211331290302, guid: f78c4151a6d24e54e89c4d0a97383e33,
         type: 3}
       propertyPath: m_Enabled
@@ -186672,7 +186589,7 @@ PrefabInstance:
     - target: {fileID: 6285634573041608616, guid: f78c4151a6d24e54e89c4d0a97383e33,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -835.3
+      value: -874.97
       objectReference: {fileID: 0}
     - target: {fileID: 6285634573041608616, guid: f78c4151a6d24e54e89c4d0a97383e33,
         type: 3}
@@ -186682,7 +186599,7 @@ PrefabInstance:
     - target: {fileID: 6285634573041608616, guid: f78c4151a6d24e54e89c4d0a97383e33,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 202.8
+      value: 349.47
       objectReference: {fileID: 0}
     - target: {fileID: 6285634573041608616, guid: f78c4151a6d24e54e89c4d0a97383e33,
         type: 3}
