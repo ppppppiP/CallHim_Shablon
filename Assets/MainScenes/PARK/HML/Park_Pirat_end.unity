@@ -6742,6 +6742,7 @@ GameObject:
   - component: {fileID: 153537328}
   - component: {fileID: 153537327}
   - component: {fileID: 153537326}
+  - component: {fileID: 153537330}
   m_Layer: 0
   m_Name: triger_on_off
   m_TagString: Untagged
@@ -6839,6 +6840,18 @@ MonoBehaviour:
           m_StringArgument: door_1
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 153537330}
+        m_TargetAssemblyTypeName: OnTriggerSaveSystem, Assembly-CSharp
+        m_MethodName: SetKeyTrue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: door_1
+          m_BoolArgument: 1
+        m_CallState: 2
   EOnTriggerExit:
     m_PersistentCalls:
       m_Calls: []
@@ -6926,6 +6939,34 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153537324}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &153537330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153537324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be4d47e8218b97e4b938df620c5d4fe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnSaveLoad:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 153537326}
+        m_TargetAssemblyTypeName: SimpleOnTriggerEvents, Assembly-CSharp
+        m_MethodName: EOnTriggerEnterVoid
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  SaveKey: "\u0444\u044B\u0432\u043F\u0430\u044B\u0432\u0430\u043F\u0443\u043A"
 --- !u!1 &156507999
 GameObject:
   m_ObjectHideFlags: 0
@@ -14948,7 +14989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneReference:
-    m_AssetGUID: caa0226737ebbff4cbff20e835d93f5b
+    m_AssetGUID: 28d251fb051c84271902dcae062ceb53
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
@@ -18973,6 +19014,7 @@ GameObject:
   - component: {fileID: 356571385}
   - component: {fileID: 356571384}
   - component: {fileID: 356571383}
+  - component: {fileID: 356571387}
   m_Layer: 0
   m_Name: triger_off
   m_TagString: Untagged
@@ -19069,6 +19111,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 356571387}
+        m_TargetAssemblyTypeName: OnTriggerSaveSystem, Assembly-CSharp
+        m_MethodName: SetKeyTrue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   DetectLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -19145,6 +19199,34 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356571381}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &356571387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356571381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be4d47e8218b97e4b938df620c5d4fe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnSaveLoad:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 356571383}
+        m_TargetAssemblyTypeName: SimpleOnTriggerEvents, Assembly-CSharp
+        m_MethodName: EOnKeyInTriggerDownVoid
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  SaveKey: 5436457465
 --- !u!1001 &358323145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60822,6 +60904,7 @@ GameObject:
   - component: {fileID: 1114598081}
   - component: {fileID: 1114598083}
   - component: {fileID: 1114598082}
+  - component: {fileID: 1114598084}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -60870,7 +60953,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 63767d7513fb04e398bf8ac980e4c9bb, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -60934,7 +61017,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1114598083
@@ -60945,6 +61028,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114598080}
   m_CullTransparentMesh: 1
+--- !u!114 &1114598084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114598080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 1114598082}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430"
+  en: Loading
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 2/2 completed
+  componentTextField: 1
+  countLang: 2
 --- !u!1 &1114676950
 GameObject:
   m_ObjectHideFlags: 0
@@ -73132,6 +73267,7 @@ GameObject:
   - component: {fileID: 1339868791}
   - component: {fileID: 1339868790}
   - component: {fileID: 1339868789}
+  - component: {fileID: 1339868793}
   m_Layer: 0
   m_Name: triger_off
   m_TagString: Untagged
@@ -73197,6 +73333,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: door_1
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1339868793}
+        m_TargetAssemblyTypeName: OnTriggerSaveSystem, Assembly-CSharp
+        m_MethodName: SetKeyTrue
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -73292,6 +73440,34 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339868787}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1339868793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339868787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be4d47e8218b97e4b938df620c5d4fe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnSaveLoad:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1339868789}
+        m_TargetAssemblyTypeName: SimpleOnTriggerEvents, Assembly-CSharp
+        m_MethodName: EOnTriggerEnterVoid
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  SaveKey: sfdg23 r 3r
 --- !u!1 &1340102344
 GameObject:
   m_ObjectHideFlags: 0
@@ -78142,6 +78318,7 @@ GameObject:
   - component: {fileID: 1457925097}
   - component: {fileID: 1457925096}
   - component: {fileID: 1457925095}
+  - component: {fileID: 1457925099}
   m_Layer: 0
   m_Name: triger_off
   m_TagString: Untagged
@@ -78207,6 +78384,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: door_1
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1457925099}
+        m_TargetAssemblyTypeName: OnTriggerSaveSystem, Assembly-CSharp
+        m_MethodName: SetKeyTrue
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -78302,6 +78491,34 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457925093}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1457925099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457925093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be4d47e8218b97e4b938df620c5d4fe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnSaveLoad:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1457925095}
+        m_TargetAssemblyTypeName: SimpleOnTriggerEvents, Assembly-CSharp
+        m_MethodName: EOnTriggerEnterVoid
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  SaveKey: afds23 r2r 23r23 r23r
 --- !u!1 &1458190815
 GameObject:
   m_ObjectHideFlags: 0
@@ -88946,6 +89163,7 @@ GameObject:
   - component: {fileID: 1650321050}
   - component: {fileID: 1650321049}
   - component: {fileID: 1650321048}
+  - component: {fileID: 1650321052}
   m_Layer: 0
   m_Name: triger_on_off
   m_TagString: Untagged
@@ -89023,6 +89241,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: door_1
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1650321052}
+        m_TargetAssemblyTypeName: OnTriggerSaveSystem, Assembly-CSharp
+        m_MethodName: SetKeyTrue
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -89118,6 +89348,34 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650321046}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1650321052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650321046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be4d47e8218b97e4b938df620c5d4fe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnSaveLoad:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1650321048}
+        m_TargetAssemblyTypeName: SimpleOnTriggerEvents, Assembly-CSharp
+        m_MethodName: EOnTriggerEnterVoid
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  SaveKey: "\u0439 34\u0435\u0439\u0443\u043A\u044B\u0432\u0430\u043F"
 --- !u!1001 &1653584421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -97670,6 +97928,7 @@ GameObject:
   - component: {fileID: 1808314838}
   - component: {fileID: 1808314837}
   - component: {fileID: 1808314836}
+  - component: {fileID: 1808314840}
   m_Layer: 0
   m_Name: triger_off
   m_TagString: Untagged
@@ -97747,6 +98006,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: door_1
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1808314840}
+        m_TargetAssemblyTypeName: OnTriggerSaveSystem, Assembly-CSharp
+        m_MethodName: SetKeyTrue
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -97842,6 +98113,34 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1808314834}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1808314840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808314834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be4d47e8218b97e4b938df620c5d4fe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnSaveLoad:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1808314836}
+        m_TargetAssemblyTypeName: SimpleOnTriggerEvents, Assembly-CSharp
+        m_MethodName: EOnTriggerEnterVoid
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  SaveKey: qr32 adsf3 r32r
 --- !u!1 &1810223516 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7818126917492877294, guid: 6d97add30436a4d419237830af855ca4,

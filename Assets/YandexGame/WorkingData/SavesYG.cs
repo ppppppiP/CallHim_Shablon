@@ -22,8 +22,9 @@ namespace YG
         public string[] VideoName = new string[20];
         public bool[] VideoBool = new bool[20];
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
-
-        // Инициализация полей
+        public string[] KeysToSave = new string[100];
+        // Инициализация полей public bool[] KeyStates = new bool[100];
+        public bool[] KeyStates = new bool[100];
         public SavesYG()
         {
             if (YandexGame.EnvironmentData.isMobile)

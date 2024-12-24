@@ -11,7 +11,7 @@ public class SensitivitySlider : MonoBehaviour
         if (YandexGame.EnvironmentData.isMobile)
         {
             sensitivitySlider.minValue = 0.2f;
-            sensitivitySlider.maxValue = 100f;
+            sensitivitySlider.maxValue = 200f;
         }
         else
         {
