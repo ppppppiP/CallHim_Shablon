@@ -29,7 +29,7 @@ namespace YG
         {
             if (YandexGame.EnvironmentData.isMobile)
             {
-                sensitivity = 100;
+                sensitivity = 15;
             }
             else
             {

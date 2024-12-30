@@ -17,23 +17,18 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 3da89146ec6b1c54cb34a7e88e62cbe1
   m_SerializeEntries:
-  - m_GUID: 4d59d0a356a0d4563933d61473e7c956
-    m_Address: Assets/MainScenes/PARK/HML/Park_Inoplonetine_end.unity
+  - m_GUID: 42795221a6fcb04408785577139e820a
+    m_Address: Assets/MainScenes/SCHOOl/WDS/Sport.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b0345b18f45c940438fa6cbab4c94646
-    m_Address: Assets/MainScenes/PARK/HML/Park_Pirat_end.unity
+  - m_GUID: 6dca2fdf961a72744a30e46b28c89057
+    m_Address: Assets/MainScenes/SCHOOl/WDS/ScholaGovnaDs.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 28d251fb051c84271902dcae062ceb53
-    m_Address: Assets/MainScenes/PARK/HML/Park_SITY_end.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: aa69a677f46644a4ab82ffef7daed441
-    m_Address: Assets/MainScenes/PARK/HML/Park_Zamok_End.unity
+  - m_GUID: e180a64f58456484ca14aedbf6a66dab
+    m_Address: Assets/MainScenes/SCHOOl/WDS/Street.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
