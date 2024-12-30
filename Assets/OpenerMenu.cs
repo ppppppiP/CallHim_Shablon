@@ -5,14 +5,22 @@ using UnityEngine;
 public class OpenerMenu : MonoBehaviour
 {
     [SerializeField] GameObject Menu;
+    [SerializeField] GameObject Ads;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if(Menu.activeSelf == true)
-            Menu.SetActive(false);
+            if (Menu.activeSelf == true)
+            {
+                Ads.SetActive(true);
+                Menu.SetActive(false);
+            }
             else
-            Menu.SetActive(true);
+            {
+                Ads.SetActive(false);
+                Menu.SetActive(true);
+            }
         }
+
     }
 }

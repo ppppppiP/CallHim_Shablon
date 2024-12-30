@@ -33,7 +33,7 @@ namespace YG
             }
             else
             {
-                sensitivity = 100;
+                sensitivity = 15;
             }
     
                 VideoName = new string[20];

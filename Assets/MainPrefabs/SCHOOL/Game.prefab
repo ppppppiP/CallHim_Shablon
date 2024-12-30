@@ -626,6 +626,7 @@ GameObject:
   - component: {fileID: 277338030277814053}
   - component: {fileID: 2403988770363576991}
   - component: {fileID: 8392381883583739967}
+  - component: {fileID: 1348539701558906863}
   m_Layer: 4
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -682,8 +683,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u041F\u0435\u0440\u0435\u0437\u0430\u043F\u0443\u0441\u0442\u0438\u0442\u044C"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 5b0d50b10e33d75489db4ad60f9808d1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 63767d7513fb04e398bf8ac980e4c9bb, type: 2}
+  m_sharedMaterial: {fileID: -7306553760915565491, guid: 63767d7513fb04e398bf8ac980e4c9bb,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -749,6 +751,58 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1348539701558906863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937758681993448797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 8392381883583739967}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u041F\u0435\u0440\u0435\u0437\u0430\u043F\u0443\u0441\u0442\u0438\u0442\u044C"
+  en: Restart
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 2/2 completed
+  componentTextField: 1
+  countLang: 2
 --- !u!1 &1955451342451598298
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,6 +814,7 @@ GameObject:
   - component: {fileID: 1446596518714596430}
   - component: {fileID: 2723038115028612881}
   - component: {fileID: 2513151993574872494}
+  - component: {fileID: 345840202338540184}
   m_Layer: 4
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -817,8 +872,9 @@ MonoBehaviour:
   m_text: "\u0412\u044B \u043F\u0440\u043E\u0438\u0433\u0440\u0430\u043B\u0438, \u043F\u0435\u0440\u0435\u0437\u0430\u043F\u0443\u0441\u0442\u0438\u0442\u044C
     \u0438\u0433\u0440\u0443?"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 8f833b40061d3d04885448532e4fe3a7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 63767d7513fb04e398bf8ac980e4c9bb, type: 2}
+  m_sharedMaterial: {fileID: -7306553760915565491, guid: 63767d7513fb04e398bf8ac980e4c9bb,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -884,6 +940,59 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &345840202338540184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955451342451598298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 2513151993574872494}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0412\u044B \u043F\u0440\u043E\u0438\u0433\u0440\u0430\u043B\u0438, \u043F\u0435\u0440\u0435\u0437\u0430\u043F\u0443\u0441\u0442\u0438\u0442\u044C
+    \u0438\u0433\u0440\u0443?"
+  en: You lost, should you restart the game?
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 2/2 completed
+  componentTextField: 1
+  countLang: 2
 --- !u!1 &2243224879711812882
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,6 +1499,7 @@ GameObject:
   - component: {fileID: 6799158789696745362}
   - component: {fileID: 5387036757433523419}
   - component: {fileID: 3730953261198937936}
+  - component: {fileID: 681421496635680150}
   m_Layer: 4
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1446,8 +1556,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u0412\u044B\u0439\u0442\u0438"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 7f1dc34628a7a7443970596798f22034, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 63767d7513fb04e398bf8ac980e4c9bb, type: 2}
+  m_sharedMaterial: {fileID: -7306553760915565491, guid: 63767d7513fb04e398bf8ac980e4c9bb,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1513,6 +1624,58 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &681421496635680150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3346285087387566140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMPComponent: {fileID: 3730953261198937936}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0412\u044B\u0439\u0442\u0438"
+  en: Log out
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  changeOnlyFont: 0
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  additionalText: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 2/2 completed
+  componentTextField: 1
+  countLang: 2
 --- !u!1 &3380613845634922471
 GameObject:
   m_ObjectHideFlags: 0
