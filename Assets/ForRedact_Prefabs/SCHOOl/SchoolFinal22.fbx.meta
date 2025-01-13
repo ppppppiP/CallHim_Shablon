@@ -3,7 +3,22 @@ guid: ae8179ed514cf584a8981eca3be12631
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Josku material
+    second: {fileID: 2100000, guid: 2166bc12ab156e743b267bf5c3f37818, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: b5c65c5a4028a6c43ae3b6b15ef6e1e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 7cdc3458fa03c454bbacdc5086a5d5a3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
