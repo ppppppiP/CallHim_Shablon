@@ -21,11 +21,13 @@ public class ButtonEventHandler : MonoBehaviour
 
     public void RemoveListener()
     {
+        if( SpButton != null ) 
         SpButton.onButtondown.RemoveAllListeners();
     }
 
     public void SetListener(Action action)
     {
-        SpButton.onButtondown.AddListener(action.Invoke);
+        if (SpButton != null)
+            SpButton.onButtondown.AddListener(action.Invoke);
     }
 }
