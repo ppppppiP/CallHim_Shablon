@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ForRedact_Prefabs/SCHOOl/Menu/MegaMenu.unity
-    guid: 600296c50963f1146a5c784f243495d6
+    path: Assets/MainScenes/SCHOOl/WDS/menu.unity
+    guid: 7e1fc0e3800e1482e84e062a7e37f6ed
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: b6f4e34ab51318346aa2b379b07b848a,
       type: 2}

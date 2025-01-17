@@ -6,7 +6,7 @@ using UniversalMobileController;
 public class ButtonEventHandler : MonoBehaviour
 {
     SpecialButton SpButton;
-
+    [SerializeField] GameObject VisiableIcone;
     public static ButtonEventHandler instance;
 
     private void Awake()
@@ -17,6 +17,7 @@ public class ButtonEventHandler : MonoBehaviour
     public void Start()
     {
         SpButton= GetComponent<SpecialButton>();
+        VisiableIcone.SetActive(false);
     }
 
     public void RemoveListener()
@@ -29,5 +30,14 @@ public class ButtonEventHandler : MonoBehaviour
     {
         if (SpButton != null)
             SpButton.onButtondown.AddListener(action.Invoke);
+    }
+
+    public void Enable()
+    {
+        VisiableIcone.SetActive(true);
+    }
+    public void Disable()
+    {
+        VisiableIcone.SetActive(false);
     }
 }

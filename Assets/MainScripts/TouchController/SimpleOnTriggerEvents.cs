@@ -23,6 +23,8 @@ public class SimpleOnTriggerEvents: MonoBehaviour
             isEnter = true;
             EOnTriggerEnter?.Invoke();
             ButtonEventHandler.instance.SetListener(() => MobileInput()) ;
+            if (YandexGame.EnvironmentData.isMobile)
+                ButtonEventHandler.instance.Enable();
         }
     }
 
@@ -33,6 +35,8 @@ public class SimpleOnTriggerEvents: MonoBehaviour
             isEnter = false;
             EOnTriggerExit?.Invoke();
             ButtonEventHandler.instance.RemoveListener();
+            if(YandexGame.EnvironmentData.isMobile)
+            ButtonEventHandler.instance.Disable();
         }
     }
 
